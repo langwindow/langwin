@@ -11,7 +11,7 @@
     .header { text-align: center; margin-bottom: 24px; }
     .header h1 { color: #1a1a2e; font-size: 24px; font-weight: 700; margin-bottom: 8px; }
     .header p { color: #4A7C7E; font-size: 15px; font-weight: 600; }
-    .tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 30px; flex-wrap: wrap; }
+    .tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 30px; flex-wrap: wrap; position: relative; padding-bottom: 40px; }
     .tab-btn { padding: 12px 20px; border-radius: 25px; border: none; cursor: pointer; font-size: 13px; font-weight: 600; transition: all 0.3s; background: #fff; color: #333; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-family: 'Noto Sans KR', sans-serif; }
     .tab-btn.active { background: #4A7C7E; color: #fff; }
     .tab-btn:hover { transform: translateY(-2px); }
@@ -36,6 +36,10 @@
     .grade-tag.middle { background: #4CAF50; }
     .grade-tag.high12 { background: #2196F3; }
     .grade-tag.high3 { background: #9C27B0; }
+    .tab-hint { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 8px; padding: 8px 16px; background: #FF6B35; color: white; font-size: 12px; font-weight: 600; border-radius: 20px; white-space: nowrap; animation: bounce 1.5s infinite; z-index: 100; box-shadow: 0 3px 10px rgba(255,107,53,0.4); }
+    .tab-hint::before { content: ''; position: absolute; top: -6px; left: 50%; transform: translateX(-50%); border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 6px solid #FF6B35; }
+    @keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-5px); } }
+    .header { position: relative; }
     
     .director-greeting { width: 900px; background: #ffffff; padding: 50px; border: 1px solid #eee; }
     .director-greeting .header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
@@ -206,6 +210,7 @@
       .schedule-grid.col3, .schedule-grid.col2 { grid-template-columns: 1fr; }
       .about-langwin h1 { font-size: 20px; }
       .grade-tags { flex-direction: column; }
+      .tab-hint { font-size: 11px; padding: 6px 12px; }
     }
   </style>
 </head>
@@ -222,6 +227,7 @@
     <button class="tab-btn" onclick="showTab(3)">고등부 수업 소개</button>
     <button class="tab-btn" onclick="showTab(4)">고등부 학교 분석</button>
     <button class="tab-btn" onclick="showTab(5)">전체 시간표</button>
+    <div class="tab-hint" id="tabHint">👆 탭을 눌러 내용을 확인하세요!</div>
   </div>
   
   <div class="content-wrapper">
@@ -535,6 +541,8 @@
     function showTab(index) {
       document.querySelectorAll('.tab-btn').forEach((btn, i) => { btn.classList.toggle('active', i === index); });
       document.querySelectorAll('.tab-content').forEach((content, i) => { content.classList.toggle('active', i === index); });
+      const hint = document.getElementById('tabHint');
+      if (hint) hint.style.display = 'none';
     }
   </script>
 </body>
