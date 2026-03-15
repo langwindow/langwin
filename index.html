@@ -145,6 +145,68 @@
     .schedule-item .time { font-size: 11px; color: #666; }
     .schedule-item .school { font-size: 15px; font-weight: 700; color: #1a1a2e; }
     .schedule-item .teacher { font-size: 10px; color: #888; }
+    
+    /* 모바일 반응형 */
+    @media (max-width: 1100px) {
+      body { padding: 10px; }
+      .header h1 { font-size: 20px; }
+      .header p { font-size: 13px; }
+      .tabs { gap: 5px; }
+      .tab-btn { padding: 8px 12px; font-size: 11px; }
+      
+      .about-langwin { width: 100%; max-width: 100%; height: auto; padding: 20px; flex-direction: column; gap: 20px; }
+      .about-langwin h1 { font-size: 24px; }
+      .about-langwin .desc { font-size: 14px; }
+      .grade-tags { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+      .grade-tag { padding: 10px 16px; font-size: 14px; }
+      
+      .director-greeting { width: 100%; max-width: 100%; padding: 20px; }
+      .director-greeting .header-row { flex-direction: column; gap: 10px; align-items: flex-start; }
+      .director-greeting h1 { font-size: 22px; margin-bottom: 20px; padding-bottom: 10px; }
+      .greeting-text p { font-size: 14px; }
+      .greeting-text .highlight-box { padding: 15px; }
+      
+      .middle-intro, .high-intro { width: 100%; max-width: 100%; padding: 20px; }
+      .middle-intro .header-row, .high-intro .header-row { flex-direction: column; gap: 10px; align-items: flex-start; }
+      .middle-intro h1, .high-intro h1 { font-size: 20px; }
+      .middle-intro .subtitle, .high-intro .subtitle { font-size: 14px; margin-bottom: 20px; }
+      .feature-grid { grid-template-columns: 1fr; gap: 12px; }
+      .feature-card { padding: 16px; }
+      .feature-card .icon { font-size: 24px; }
+      .feature-card h3 { font-size: 16px; }
+      .feature-card p { font-size: 13px; }
+      .schedule-info { padding: 16px; }
+      .schedule-info .options { flex-direction: column; gap: 10px; }
+      .schedule-info .option-tag { padding: 10px 20px; font-size: 14px; }
+      .quote-box { padding: 16px; }
+      .quote-box p { font-size: 15px; }
+      
+      .school-analysis { width: 100%; max-width: 100%; padding: 20px; }
+      .school-analysis .header-row { flex-direction: column; gap: 10px; align-items: flex-start; }
+      .school-analysis h1 { font-size: 20px; }
+      .school-grid { grid-template-columns: 1fr; }
+      .school-card { padding: 16px; }
+      .school-card h3 { font-size: 18px; }
+      .school-card-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+      
+      .full-schedule { width: 100%; max-width: 100%; padding: 20px; }
+      .main-copy h1 { font-size: 24px; }
+      .main-copy p { font-size: 14px; margin-bottom: 20px; }
+      .schedule-box { padding: 16px; }
+      .schedule-box h2 { font-size: 18px; }
+      .schedule-grid.col3, .schedule-grid.col2 { grid-template-columns: 1fr 1fr; }
+      .schedule-item { padding: 8px 10px; }
+      .schedule-item .school { font-size: 13px; }
+      
+      .footer-bar { font-size: 12px; padding: 12px; }
+      .logo { height: 40px; margin-bottom: 15px; }
+    }
+    
+    @media (max-width: 500px) {
+      .schedule-grid.col3, .schedule-grid.col2 { grid-template-columns: 1fr; }
+      .about-langwin h1 { font-size: 20px; }
+      .grade-tags { flex-direction: column; }
+    }
   </style>
 </head>
 <body>
