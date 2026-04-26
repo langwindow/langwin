@@ -49,6 +49,71 @@
     @keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-5px); } }
     @keyframes pulse { 0%, 100% { box-shadow: 0 2px 8px rgba(255,107,53,0.3); } 50% { box-shadow: 0 2px 16px rgba(255,107,53,0.6); } }
     .header { position: relative; }
+
+    .mock-exam { width: 1000px; background: #fff; padding: 50px; border: 1px solid #eee; }
+    .mock-exam .header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+    .mock-exam .logo { height: 50px; margin-bottom: 0; }
+    .mock-exam .badge { background: #FF6B35; color: #fff; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 700; }
+    .mock-exam h1 { font-size: 32px; font-weight: 900; color: #1a1a2e; margin-bottom: 8px; text-align: center; }
+    .mock-exam h1 span { color: #FF6B35; }
+    .mock-exam .subtitle { font-size: 16px; color: #666; text-align: center; margin-bottom: 32px; }
+    .mock-exam .intro-text { font-size: 15px; color: #333; line-height: 1.8; margin-bottom: 28px; }
+    .mock-exam .intro-text strong { color: #FF6B35; }
+    .mock-exam .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 28px; }
+    .mock-exam .info-card { background: #f8f9fa; border-radius: 16px; padding: 24px; border-left: 5px solid #FF6B35; }
+    .mock-exam .info-card .icon { font-size: 28px; margin-bottom: 10px; }
+    .mock-exam .info-card h3 { font-size: 17px; font-weight: 800; color: #1a1a2e; margin-bottom: 8px; }
+    .mock-exam .info-card p { font-size: 14px; color: #555; line-height: 1.6; }
+    .mock-exam .schedule-banner { background: linear-gradient(135deg, #FF6B35, #e55a2b); border-radius: 16px; padding: 28px; text-align: center; color: #fff; margin-bottom: 28px; }
+    .mock-exam .schedule-banner h3 { font-size: 20px; font-weight: 800; margin-bottom: 16px; }
+    .mock-exam .schedule-banner .schedule-row { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+    .mock-exam .schedule-banner .schedule-tag { background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 10px; font-size: 15px; font-weight: 600; }
+    .mock-exam .path-section { margin-bottom: 28px; }
+    .mock-exam .path-section h2 { font-size: 20px; font-weight: 800; color: #1a1a2e; margin-bottom: 16px; text-align: center; }
+    .mock-exam .path-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: stretch; }
+    .mock-exam .path-card { background: #f8f9fa; border-radius: 16px; padding: 24px; text-align: center; }
+    .mock-exam .path-card.pass { border: 3px solid #4CAF50; }
+    .mock-exam .path-card.grow { border: 3px solid #2196F3; }
+    .mock-exam .path-card h3 { font-size: 18px; font-weight: 800; margin-bottom: 8px; }
+    .mock-exam .path-card.pass h3 { color: #4CAF50; }
+    .mock-exam .path-card.grow h3 { color: #2196F3; }
+    .mock-exam .path-card p { font-size: 14px; color: #555; line-height: 1.6; }
+    .mock-exam .path-card .result-badge { display: inline-block; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; color: #fff; margin-top: 12px; }
+    .mock-exam .path-card.pass .result-badge { background: #4CAF50; }
+    .mock-exam .path-card.grow .result-badge { background: #2196F3; }
+    .mock-exam .path-arrow { display: flex; align-items: center; justify-content: center; font-size: 14px; color: #999; font-weight: 600; }
+    .mock-exam .apply-section { background: #FFF8F5; border: 2px solid #FF6B35; border-radius: 16px; padding: 32px; margin-bottom: 28px; }
+    .mock-exam .apply-section h2 { font-size: 20px; font-weight: 800; color: #FF6B35; margin-bottom: 20px; text-align: center; }
+    .mock-exam .apply-form { display: flex; flex-direction: column; gap: 14px; max-width: 500px; margin: 0 auto; }
+    .mock-exam .apply-form label { font-size: 14px; font-weight: 600; color: #333; }
+    .mock-exam .apply-form input, .mock-exam .apply-form select, .mock-exam .apply-form textarea { padding: 12px 16px; border: 2px solid #ddd; border-radius: 10px; font-size: 14px; font-family: 'Noto Sans KR', sans-serif; outline: none; transition: border-color 0.3s; }
+    .mock-exam .apply-form input:focus, .mock-exam .apply-form select:focus, .mock-exam .apply-form textarea:focus { border-color: #FF6B35; }
+    .mock-exam .apply-form textarea { resize: vertical; min-height: 80px; }
+    .mock-exam .apply-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .mock-exam .apply-form .form-group { display: flex; flex-direction: column; gap: 4px; }
+    .mock-exam .apply-btn { background: #FF6B35; color: #fff; border: none; padding: 14px; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; font-family: 'Noto Sans KR', sans-serif; transition: all 0.3s; margin-top: 8px; }
+    .mock-exam .apply-btn:hover { background: #e55a2b; transform: translateY(-2px); }
+    .mock-exam .apply-btn:disabled { background: #ccc; cursor: not-allowed; transform: none; }
+    .mock-exam .apply-success { display: none; text-align: center; padding: 24px; }
+    .mock-exam .apply-success .check { font-size: 48px; margin-bottom: 12px; }
+    .mock-exam .apply-success p { font-size: 16px; color: #333; line-height: 1.6; }
+
+    .popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 20px; }
+    .popup-box { background: #fff; border-radius: 20px; max-width: 420px; width: 100%; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3); animation: popIn 0.3s ease; }
+    @keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .popup-header { background: linear-gradient(135deg, #FF6B35, #e55a2b); padding: 28px 24px; text-align: center; color: #fff; }
+    .popup-header h2 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+    .popup-header p { font-size: 14px; opacity: 0.9; }
+    .popup-body { padding: 24px; }
+    .popup-body .info-item { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; color: #333; }
+    .popup-body .info-item:last-child { border-bottom: none; }
+    .popup-body .info-item .icon { font-size: 20px; }
+    .popup-actions { display: flex; gap: 10px; padding: 0 24px 24px; }
+    .popup-actions button { flex: 1; padding: 14px; border-radius: 12px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: 'Noto Sans KR', sans-serif; border: none; transition: all 0.3s; }
+    .popup-actions .btn-primary { background: #FF6B35; color: #fff; }
+    .popup-actions .btn-primary:hover { background: #e55a2b; }
+    .popup-actions .btn-secondary { background: #f0f0f0; color: #666; }
+    .popup-actions .btn-secondary:hover { background: #e0e0e0; }
     
     .director-greeting { width: 900px; background: #ffffff; padding: 50px; border: 1px solid #eee; }
     .director-greeting .header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
@@ -159,55 +224,6 @@
     .schedule-item .school { font-size: 15px; font-weight: 700; color: #1a1a2e; }
     .schedule-item .teacher { font-size: 10px; color: #888; }
     
-    /* 모의고사반 모집 */
-    .mock-exam { width: 1000px; background: #ffffff; padding: 50px; border: 1px solid #eee; }
-    .mock-exam .header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
-    .mock-exam .logo { height: 50px; margin-bottom: 0; }
-    .mock-exam .badge { background: #FF6B35; color: #fff; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 700; }
-    .mock-exam h1 { font-size: 32px; font-weight: 900; color: #1a1a2e; margin-bottom: 8px; text-align: center; }
-    .mock-exam h1 span { color: #FF6B35; }
-    .mock-exam .subtitle { font-size: 16px; color: #666; text-align: center; margin-bottom: 32px; }
-    .mock-exam .intro-text { font-size: 15px; color: #333; line-height: 1.8; margin-bottom: 28px; }
-    .mock-exam .intro-text strong { color: #FF6B35; }
-    .mock-exam .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 28px; }
-    .mock-exam .info-card { background: #f8f9fa; border-radius: 16px; padding: 24px; border-left: 5px solid #FF6B35; }
-    .mock-exam .info-card .icon { font-size: 28px; margin-bottom: 10px; }
-    .mock-exam .info-card h3 { font-size: 17px; font-weight: 800; color: #1a1a2e; margin-bottom: 8px; }
-    .mock-exam .info-card p { font-size: 14px; color: #555; line-height: 1.6; }
-    .mock-exam .schedule-banner { background: linear-gradient(135deg, #FF6B35, #e55a2b); border-radius: 16px; padding: 28px; text-align: center; color: #fff; margin-bottom: 28px; }
-    .mock-exam .schedule-banner h3 { font-size: 20px; font-weight: 800; margin-bottom: 16px; }
-    .mock-exam .schedule-banner .schedule-row { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
-    .mock-exam .schedule-banner .schedule-tag { background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 10px; font-size: 15px; font-weight: 600; }
-    .mock-exam .path-section { margin-bottom: 28px; }
-    .mock-exam .path-section h2 { font-size: 20px; font-weight: 800; color: #1a1a2e; margin-bottom: 16px; text-align: center; }
-    .mock-exam .path-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: stretch; }
-    .mock-exam .path-card { background: #f8f9fa; border-radius: 16px; padding: 24px; text-align: center; }
-    .mock-exam .path-card.pass { border: 3px solid #4CAF50; }
-    .mock-exam .path-card.grow { border: 3px solid #2196F3; }
-    .mock-exam .path-card h3 { font-size: 18px; font-weight: 800; margin-bottom: 8px; }
-    .mock-exam .path-card.pass h3 { color: #4CAF50; }
-    .mock-exam .path-card.grow h3 { color: #2196F3; }
-    .mock-exam .path-card p { font-size: 14px; color: #555; line-height: 1.6; }
-    .mock-exam .path-card .result-badge { display: inline-block; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; color: #fff; margin-top: 12px; }
-    .mock-exam .path-card.pass .result-badge { background: #4CAF50; }
-    .mock-exam .path-card.grow .result-badge { background: #2196F3; }
-    .mock-exam .path-arrow { display: flex; align-items: center; justify-content: center; font-size: 14px; color: #999; font-weight: 600; }
-    .mock-exam .apply-section { background: #FFF8F5; border: 2px solid #FF6B35; border-radius: 16px; padding: 32px; margin-bottom: 28px; }
-    .mock-exam .apply-section h2 { font-size: 20px; font-weight: 800; color: #FF6B35; margin-bottom: 20px; text-align: center; }
-    .mock-exam .apply-form { display: flex; flex-direction: column; gap: 14px; max-width: 500px; margin: 0 auto; }
-    .mock-exam .apply-form label { font-size: 14px; font-weight: 600; color: #333; margin-bottom: 2px; }
-    .mock-exam .apply-form input, .mock-exam .apply-form select, .mock-exam .apply-form textarea { padding: 12px 16px; border: 2px solid #ddd; border-radius: 10px; font-size: 14px; font-family: 'Noto Sans KR', sans-serif; outline: none; transition: border-color 0.3s; }
-    .mock-exam .apply-form input:focus, .mock-exam .apply-form select:focus, .mock-exam .apply-form textarea:focus { border-color: #FF6B35; }
-    .mock-exam .apply-form textarea { resize: vertical; min-height: 80px; }
-    .mock-exam .apply-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .mock-exam .apply-form .form-group { display: flex; flex-direction: column; gap: 4px; }
-    .mock-exam .apply-btn { background: #FF6B35; color: #fff; border: none; padding: 14px; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; font-family: 'Noto Sans KR', sans-serif; transition: all 0.3s; margin-top: 8px; }
-    .mock-exam .apply-btn:hover { background: #e55a2b; transform: translateY(-2px); }
-    .mock-exam .apply-btn:disabled { background: #ccc; cursor: not-allowed; transform: none; }
-    .mock-exam .apply-success { display: none; text-align: center; padding: 24px; }
-    .mock-exam .apply-success .check { font-size: 48px; margin-bottom: 12px; }
-    .mock-exam .apply-success p { font-size: 16px; color: #333; line-height: 1.6; }
-    
     /* 모바일 반응형 */
     @media (max-width: 1100px) {
       body { padding: 10px; }
@@ -262,14 +278,12 @@
       
       .footer-bar { font-size: 12px; padding: 12px; }
       .logo { height: 40px; margin-bottom: 15px; }
-      
       .mock-exam { width: 100%; max-width: 100%; padding: 20px; }
       .mock-exam .header-row { flex-direction: column; gap: 10px; align-items: flex-start; }
       .mock-exam h1 { font-size: 20px; }
       .mock-exam .subtitle { font-size: 14px; margin-bottom: 20px; }
       .mock-exam .intro-text { font-size: 14px; }
-      .mock-exam .info-grid { grid-template-columns: 1fr; gap: 12px; }
-      .mock-exam .info-card { padding: 16px; }
+      .mock-exam .info-grid { grid-template-columns: 1fr; }
       .mock-exam .schedule-banner { padding: 20px; }
       .mock-exam .schedule-banner .schedule-row { flex-direction: column; gap: 10px; }
       .mock-exam .path-grid { grid-template-columns: 1fr; }
@@ -616,35 +630,16 @@
           </div>
           <h1>중3, 지금 <span>고등부 모의고사</span>를 경험하세요</h1>
           <p class="subtitle">중학교 국어와 고등학교 국어는 완전히 다른 시험입니다</p>
-          
           <div class="intro-text">
             <p>중학교 국어는 교과서 내용을 외워서 푸는 시험이지만, 고등 모의고사는 <strong>처음 보는 지문을 제한된 시간 안에 정확히 읽어내고 판단하는 능력</strong>을 요구합니다.</p>
             <p style="margin-top:12px;">이 차이를 중3때 미리 경험하고 대비하는 학생과, 고등학교에 가서 처음 마주하는 학생의 차이는 생각보다 큽니다. 언어의창에서 중3 학생들을 대상으로 <strong>고등부 모의고사 풀이반</strong>을 개강합니다.</p>
           </div>
-
           <div class="info-grid">
-            <div class="info-card">
-              <div class="icon">📖</div>
-              <h3>고등부 모의고사 지문 독해</h3>
-              <p>처음 보는 지문을 어떻게 읽어야 하는지, 핵심 정보를 어떻게 빠르게 파악하는지 체계적으로 훈련합니다.</p>
-            </div>
-            <div class="info-card">
-              <div class="icon">🎯</div>
-              <h3>문제 유형별 접근 전략</h3>
-              <p>문학, 비문학, 문법 등 유형별로 문제에 접근하는 방법과 선지를 판단하는 사고방식을 익힙니다.</p>
-            </div>
-            <div class="info-card">
-              <div class="icon">🔍</div>
-              <h3>오답 분석 및 클리닉</h3>
-              <p>틀린 문제를 왜 틀렸는지, 맞은 문제도 근거가 정확한지 하나하나 점검하며 실력을 쌓아갑니다.</p>
-            </div>
-            <div class="info-card">
-              <div class="icon">🧠</div>
-              <h3>고등 국어 사고방식 장착</h3>
-              <p>단순 암기가 아닌 분석적 읽기와 논리적 판단력을 중3 시기에 미리 갖추도록 지도합니다.</p>
-            </div>
+            <div class="info-card"><div class="icon">📖</div><h3>고등부 모의고사 지문 독해</h3><p>처음 보는 지문을 어떻게 읽어야 하는지, 핵심 정보를 빠르게 파악하는 훈련을 합니다.</p></div>
+            <div class="info-card"><div class="icon">🎯</div><h3>문제 유형별 접근 전략</h3><p>문학, 비문학, 문법 등 유형별 접근법과 선지 판단 사고방식을 익힙니다.</p></div>
+            <div class="info-card"><div class="icon">🔍</div><h3>오답 분석 및 클리닉</h3><p>틀린 문제를 왜 틀렸는지, 맞은 문제도 근거가 정확한지 점검합니다.</p></div>
+            <div class="info-card"><div class="icon">🧠</div><h3>고등 국어 사고방식 장착</h3><p>분석적 읽기와 논리적 판단력을 중3 시기에 미리 갖추도록 지도합니다.</p></div>
           </div>
-
           <div class="schedule-banner">
             <h3>📅 모집 일정 및 수업 안내</h3>
             <div class="schedule-row">
@@ -654,85 +649,79 @@
             </div>
             <p style="margin-top:16px;font-size:14px;opacity:0.9;">클리닉 1시간 (시간 조정 가능) + 모의고사 풀이 2시간</p>
           </div>
-
           <div class="path-section">
             <h2>📌 입학고사 결과에 따른 안내</h2>
             <div class="path-grid">
-              <div class="path-card pass">
-                <h3>✅ 입학고사 통과</h3>
-                <p>모의고사 풀이반에 바로 수강 가능합니다. 고등 국어 실전 감각을 중3 시기에 미리 장착하세요.</p>
-                <div class="result-badge">모의고사반 바로 수강</div>
-              </div>
+              <div class="path-card pass"><h3>✅ 입학고사 통과</h3><p>모의고사 풀이반에 바로 수강 가능합니다.</p><div class="result-badge">모의고사반 바로 수강</div></div>
               <div class="path-arrow">또는</div>
-              <div class="path-card grow">
-                <h3>📘 컷 미달 시</h3>
-                <p>언어의창 정규과정을 먼저 수강하며 기초 독해력과 사고력을 탄탄히 다진 후, 실력이 갖춰지면 모의고사 풀이반으로 합류합니다.</p>
-                <div class="result-badge">정규과정 → 향후 합류</div>
-              </div>
+              <div class="path-card grow"><h3>📘 컷 미달 시</h3><p>정규과정으로 기초를 다진 후 향후 합류합니다.</p><div class="result-badge">정규과정 → 향후 합류</div></div>
             </div>
-            <p style="text-align:center;margin-top:16px;font-size:14px;color:#666;">언어의창 중등부는 처음부터 고등 국어를 목표로 설계된 커리큘럼입니다.<br>입학고사 결과에 관계없이 언어의창의 수업은 고등 국어를 향한 가장 확실한 준비가 될 것입니다.</p>
+            <p style="text-align:center;margin-top:16px;font-size:14px;color:#666;">어떤 경로든 언어의창 수업은 고등 국어를 향한 가장 확실한 준비가 됩니다.</p>
           </div>
-
           <div class="apply-section">
             <h2>📞 입학고사 신청 / 상담 신청</h2>
             <div class="apply-form" id="applyForm">
               <div class="form-row">
-                <div class="form-group">
-                  <label>학생 이름 *</label>
-                  <input type="text" id="studentName" placeholder="학생 이름을 입력하세요">
-                </div>
-                <div class="form-group">
-                  <label>학교 / 학년</label>
-                  <input type="text" id="studentSchool" placeholder="예: OO중학교 3학년">
-                </div>
+                <div class="form-group"><label>학생 이름 *</label><input type="text" id="studentName" placeholder="학생 이름"></div>
+                <div class="form-group"><label>학교 / 학년</label><input type="text" id="studentSchool" placeholder="예: OO중학교 3학년"></div>
               </div>
-              <div class="form-group">
-                <label>학부모 연락처 *</label>
-                <input type="tel" id="parentPhone" placeholder="010-0000-0000">
-              </div>
-              <div class="form-group">
-                <label>신청 유형 *</label>
-                <select id="applyType">
-                  <option value="">선택해주세요</option>
-                  <option value="입학고사 신청">입학고사 신청</option>
-                  <option value="상담 신청">상담 신청</option>
-                  <option value="입학고사 + 상담">입학고사 + 상담 모두</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>문의 사항 (선택)</label>
-                <textarea id="message" placeholder="궁금한 점이 있으시면 자유롭게 작성해주세요"></textarea>
-              </div>
+              <div class="form-group"><label>학부모 연락처 *</label><input type="tel" id="parentPhone" placeholder="010-0000-0000"></div>
+              <div class="form-group"><label>신청 유형 *</label><select id="applyType"><option value="">선택해주세요</option><option value="입학고사 신청">입학고사 신청</option><option value="상담 신청">상담 신청</option><option value="입학고사 + 상담">입학고사 + 상담 모두</option></select></div>
+              <div class="form-group"><label>문의 사항 (선택)</label><textarea id="message" placeholder="궁금한 점이 있으시면 작성해주세요"></textarea></div>
               <button class="apply-btn" id="submitBtn" onclick="submitApply()">신청하기</button>
             </div>
-            <div class="apply-success" id="applySuccess">
-              <div class="check">✅</div>
-              <p><strong>신청이 접수되었습니다!</strong><br>빠른 시일 내에 연락드리겠습니다.<br>급한 문의는 <a href="tel:051-702-7412" style="color:#FF6B35;font-weight:700;">051-702-7412</a>로 전화주세요.</p>
-            </div>
-            <p style="text-align:center;margin-top:16px;font-size:13px;color:#999;">또는 전화로 직접 신청하실 수 있습니다 📞 <a href="tel:051-702-7412" style="color:#FF6B35;font-weight:600;">051-702-7412</a></p>
+            <div class="apply-success" id="applySuccess"><div class="check">✅</div><p><strong>신청이 접수되었습니다!</strong><br>빠른 시일 내에 연락드리겠습니다.<br>📞 <a href="tel:051-702-7412" style="color:#FF6B35;font-weight:700;">051-702-7412</a></p></div>
+            <p style="text-align:center;margin-top:16px;font-size:13px;color:#999;">전화 신청도 가능합니다 📞 <a href="tel:051-702-7412" style="color:#FF6B35;font-weight:600;">051-702-7412</a></p>
           </div>
-
-          <div class="footer-bar">
-            📍 해운대구 세실로27번길 21 원재프라자 8층 &nbsp;|&nbsp; 
-            📞 <a href="tel:051-702-7412">051-702-7412</a> &nbsp;|&nbsp; 
-            <a href="https://blog.naver.com/langwin" target="_blank">blog.naver.com/langwin</a>
-          </div>
+          <div class="footer-bar">📍 해운대구 세실로27번길 21 원재프라자 8층 &nbsp;|&nbsp; 📞 <a href="tel:051-702-7412">051-702-7412</a> &nbsp;|&nbsp; <a href="https://blog.naver.com/langwin" target="_blank">blog.naver.com/langwin</a></div>
         </div>
       </div>
       
     </div>
   </div>
+
+  <!-- 팝업 -->
+  <div class="popup-overlay" id="mockExamPopup">
+    <div class="popup-box">
+      <div class="popup-header">
+        <h2>🔥 중3 모의고사반 신규 모집</h2>
+        <p>고등부 모의고사, 중3때 미리 경험하세요!</p>
+      </div>
+      <div class="popup-body">
+        <div class="info-item"><span class="icon">📝</span><span>입학고사: 4/26(일) ~ 5/3(일)</span></div>
+        <div class="info-item"><span class="icon">🎓</span><span>개강: 5/9(토)</span></div>
+        <div class="info-item"><span class="icon">⏰</span><span>매주 토요일 오후 4시 ~ 7시</span></div>
+        <div class="info-item"><span class="icon">✅</span><span>입학고사 통과 시 바로 수강 가능</span></div>
+        <div class="info-item"><span class="icon">📞</span><span>신청: 051-702-7412</span></div>
+      </div>
+      <div class="popup-actions">
+        <button class="btn-secondary" onclick="closePopup()">닫기</button>
+        <button class="btn-primary" onclick="closePopup();showTab(6);">자세히 보기</button>
+      </div>
+    </div>
+  </div>
   
   <script>
     function showTab(index) {
-      document.querySelectorAll('.tab-btn').forEach((btn, i) => { btn.classList.toggle('active', i === index); });
-      document.querySelectorAll('.tab-content').forEach((content, i) => { content.classList.toggle('active', i === index); });
-      const hint = document.getElementById('tabHint');
+      document.querySelectorAll('.tab-btn').forEach(function(btn, i) { btn.classList.toggle('active', i === index); });
+      document.querySelectorAll('.tab-content').forEach(function(content, i) { content.classList.toggle('active', i === index); });
+      var hint = document.getElementById('tabHint');
       if (hint) hint.style.display = 'none';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // ★ 아래 URL을 Google Apps Script 웹앱 URL로 교체하세요
-    const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbwrDiEjWDf2VfYEC3Fz7s8tdhpxq62Y2LkJh3JpW0CJ24E0hBpq6sCno6tCtjCle3KO/exec';
+    function closePopup() {
+      document.getElementById('mockExamPopup').style.display = 'none';
+      sessionStorage.setItem('popupClosed', 'true');
+    }
+
+    if (!sessionStorage.getItem('popupClosed')) {
+      document.getElementById('mockExamPopup').style.display = 'flex';
+    } else {
+      document.getElementById('mockExamPopup').style.display = 'none';
+    }
+
+    var GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbwrDiEjWDf2VfYEC3Fz7s8tdhpxq62Y2LkJh3JpW0CJ24E0hBpq6sCno6tCtjCle3KO/exec';
 
     function submitApply() {
       var name = document.getElementById('studentName').value.trim();
@@ -740,39 +729,28 @@
       var phone = document.getElementById('parentPhone').value.trim();
       var type = document.getElementById('applyType').value;
       var msg = document.getElementById('message').value.trim();
-
-      if (!name || !phone || !type) {
-        alert('학생 이름, 연락처, 신청 유형은 필수 입력입니다.');
-        return;
-      }
-
+      if (!name || !phone || !type) { alert('학생 이름, 연락처, 신청 유형은 필수입니다.'); return; }
       var btn = document.getElementById('submitBtn');
       btn.disabled = true;
       btn.textContent = '전송 중...';
 
-      var data = {
-        studentName: name,
-        studentSchool: school,
-        parentPhone: phone,
-        applyType: type,
-        message: msg,
-        timestamp: new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })
-      };
+      var formData = new FormData();
+      formData.append('studentName', name);
+      formData.append('studentSchool', school);
+      formData.append('parentPhone', phone);
+      formData.append('applyType', type);
+      formData.append('message', msg);
+      formData.append('timestamp', new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' }));
 
-      fetch(GOOGLE_SHEET_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      })
-      .then(function() {
-        document.getElementById('applyForm').style.display = 'none';
-        document.getElementById('applySuccess').style.display = 'block';
-      })
-      .catch(function() {
-        document.getElementById('applyForm').style.display = 'none';
-        document.getElementById('applySuccess').style.display = 'block';
-      });
+      fetch(GOOGLE_SHEET_URL, { method: 'POST', body: formData })
+        .then(function() {
+          document.getElementById('applyForm').style.display = 'none';
+          document.getElementById('applySuccess').style.display = 'block';
+        })
+        .catch(function() {
+          document.getElementById('applyForm').style.display = 'none';
+          document.getElementById('applySuccess').style.display = 'block';
+        });
     }
   </script>
 </body>
