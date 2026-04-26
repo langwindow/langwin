@@ -742,15 +742,21 @@
       formData.append('message', msg);
       formData.append('timestamp', new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' }));
 
-      fetch(GOOGLE_SHEET_URL, { method: 'POST', body: formData })
-        .then(function() {
-          document.getElementById('applyForm').style.display = 'none';
-          document.getElementById('applySuccess').style.display = 'block';
-        })
-        .catch(function() {
-          document.getElementById('applyForm').style.display = 'none';
-          document.getElementById('applySuccess').style.display = 'block';
-        });
+     fetch(GOOGLE_SHEET_URL, { 
+  method: 'POST', 
+  mode: 'no-cors',  // ← CORS 문제 회피
+  body: formData 
+})
+.then(function() {
+  document.getElementById('applyForm').style.display = 'none';
+  document.getElementById('applySuccess').style.display = 'block';
+})
+.catch(function(err) {
+  console.error('전송 실패:', err);
+  alert('전송에 실패했습니다. 직접 전화 주세요: 051-702-7412');
+  btn.disabled = false;
+  btn.textContent = '신청하기';
+});
     }
   </script>
 </body>
