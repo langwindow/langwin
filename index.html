@@ -47,73 +47,7 @@
     .tab-hint { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 8px; padding: 8px 16px; background: #FF6B35; color: white; font-size: 12px; font-weight: 600; border-radius: 20px; white-space: nowrap; animation: bounce 1.5s infinite; z-index: 100; box-shadow: 0 3px 10px rgba(255,107,53,0.4); }
     .tab-hint::before { content: ''; position: absolute; top: -6px; left: 50%; transform: translateX(-50%); border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 6px solid #FF6B35; }
     @keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-5px); } }
-    @keyframes pulse { 0%, 100% { box-shadow: 0 2px 8px rgba(255,107,53,0.3); } 50% { box-shadow: 0 2px 16px rgba(255,107,53,0.6); } }
     .header { position: relative; }
-
-    .mock-exam { width: 1000px; background: #fff; padding: 50px; border: 1px solid #eee; }
-    .mock-exam .header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
-    .mock-exam .logo { height: 50px; margin-bottom: 0; }
-    .mock-exam .badge { background: #FF6B35; color: #fff; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 700; }
-    .mock-exam h1 { font-size: 32px; font-weight: 900; color: #1a1a2e; margin-bottom: 8px; text-align: center; }
-    .mock-exam h1 span { color: #FF6B35; }
-    .mock-exam .subtitle { font-size: 16px; color: #666; text-align: center; margin-bottom: 32px; }
-    .mock-exam .intro-text { font-size: 15px; color: #333; line-height: 1.8; margin-bottom: 28px; }
-    .mock-exam .intro-text strong { color: #FF6B35; }
-    .mock-exam .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 28px; }
-    .mock-exam .info-card { background: #f8f9fa; border-radius: 16px; padding: 24px; border-left: 5px solid #FF6B35; }
-    .mock-exam .info-card .icon { font-size: 28px; margin-bottom: 10px; }
-    .mock-exam .info-card h3 { font-size: 17px; font-weight: 800; color: #1a1a2e; margin-bottom: 8px; }
-    .mock-exam .info-card p { font-size: 14px; color: #555; line-height: 1.6; }
-    .mock-exam .schedule-banner { background: linear-gradient(135deg, #FF6B35, #e55a2b); border-radius: 16px; padding: 28px; text-align: center; color: #fff; margin-bottom: 28px; }
-    .mock-exam .schedule-banner h3 { font-size: 20px; font-weight: 800; margin-bottom: 16px; }
-    .mock-exam .schedule-banner .schedule-row { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
-    .mock-exam .schedule-banner .schedule-tag { background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 10px; font-size: 15px; font-weight: 600; }
-    .mock-exam .path-section { margin-bottom: 28px; }
-    .mock-exam .path-section h2 { font-size: 20px; font-weight: 800; color: #1a1a2e; margin-bottom: 16px; text-align: center; }
-    .mock-exam .path-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: stretch; }
-    .mock-exam .path-card { background: #f8f9fa; border-radius: 16px; padding: 24px; text-align: center; }
-    .mock-exam .path-card.pass { border: 3px solid #4CAF50; }
-    .mock-exam .path-card.grow { border: 3px solid #2196F3; }
-    .mock-exam .path-card h3 { font-size: 18px; font-weight: 800; margin-bottom: 8px; }
-    .mock-exam .path-card.pass h3 { color: #4CAF50; }
-    .mock-exam .path-card.grow h3 { color: #2196F3; }
-    .mock-exam .path-card p { font-size: 14px; color: #555; line-height: 1.6; }
-    .mock-exam .path-card .result-badge { display: inline-block; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; color: #fff; margin-top: 12px; }
-    .mock-exam .path-card.pass .result-badge { background: #4CAF50; }
-    .mock-exam .path-card.grow .result-badge { background: #2196F3; }
-    .mock-exam .path-arrow { display: flex; align-items: center; justify-content: center; font-size: 14px; color: #999; font-weight: 600; }
-    .mock-exam .apply-section { background: #FFF8F5; border: 2px solid #FF6B35; border-radius: 16px; padding: 32px; margin-bottom: 28px; }
-    .mock-exam .apply-section h2 { font-size: 20px; font-weight: 800; color: #FF6B35; margin-bottom: 20px; text-align: center; }
-    .mock-exam .apply-form { display: flex; flex-direction: column; gap: 14px; max-width: 500px; margin: 0 auto; }
-    .mock-exam .apply-form label { font-size: 14px; font-weight: 600; color: #333; }
-    .mock-exam .apply-form input, .mock-exam .apply-form select, .mock-exam .apply-form textarea { padding: 12px 16px; border: 2px solid #ddd; border-radius: 10px; font-size: 14px; font-family: 'Noto Sans KR', sans-serif; outline: none; transition: border-color 0.3s; }
-    .mock-exam .apply-form input:focus, .mock-exam .apply-form select:focus, .mock-exam .apply-form textarea:focus { border-color: #FF6B35; }
-    .mock-exam .apply-form textarea { resize: vertical; min-height: 80px; }
-    .mock-exam .apply-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .mock-exam .apply-form .form-group { display: flex; flex-direction: column; gap: 4px; }
-    .mock-exam .apply-btn { background: #FF6B35; color: #fff; border: none; padding: 14px; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; font-family: 'Noto Sans KR', sans-serif; transition: all 0.3s; margin-top: 8px; }
-    .mock-exam .apply-btn:hover { background: #e55a2b; transform: translateY(-2px); }
-    .mock-exam .apply-btn:disabled { background: #ccc; cursor: not-allowed; transform: none; }
-    .mock-exam .apply-success { display: none; text-align: center; padding: 24px; }
-    .mock-exam .apply-success .check { font-size: 48px; margin-bottom: 12px; }
-    .mock-exam .apply-success p { font-size: 16px; color: #333; line-height: 1.6; }
-
-    .popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 20px; }
-    .popup-box { background: #fff; border-radius: 20px; max-width: 420px; width: 100%; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3); animation: popIn 0.3s ease; }
-    @keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-    .popup-header { background: linear-gradient(135deg, #FF6B35, #e55a2b); padding: 28px 24px; text-align: center; color: #fff; }
-    .popup-header h2 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
-    .popup-header p { font-size: 14px; opacity: 0.9; }
-    .popup-body { padding: 24px; }
-    .popup-body .info-item { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; color: #333; }
-    .popup-body .info-item:last-child { border-bottom: none; }
-    .popup-body .info-item .icon { font-size: 20px; }
-    .popup-actions { display: flex; gap: 10px; padding: 0 24px 24px; }
-    .popup-actions button { flex: 1; padding: 14px; border-radius: 12px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: 'Noto Sans KR', sans-serif; border: none; transition: all 0.3s; }
-    .popup-actions .btn-primary { background: #FF6B35; color: #fff; }
-    .popup-actions .btn-primary:hover { background: #e55a2b; }
-    .popup-actions .btn-secondary { background: #f0f0f0; color: #666; }
-    .popup-actions .btn-secondary:hover { background: #e0e0e0; }
     
     .director-greeting { width: 900px; background: #ffffff; padding: 50px; border: 1px solid #eee; }
     .director-greeting .header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
@@ -278,18 +212,6 @@
       
       .footer-bar { font-size: 12px; padding: 12px; }
       .logo { height: 40px; margin-bottom: 15px; }
-      .mock-exam { width: 100%; max-width: 100%; padding: 20px; }
-      .mock-exam .header-row { flex-direction: column; gap: 10px; align-items: flex-start; }
-      .mock-exam h1 { font-size: 20px; }
-      .mock-exam .subtitle { font-size: 14px; margin-bottom: 20px; }
-      .mock-exam .intro-text { font-size: 14px; }
-      .mock-exam .info-grid { grid-template-columns: 1fr; }
-      .mock-exam .schedule-banner { padding: 20px; }
-      .mock-exam .schedule-banner .schedule-row { flex-direction: column; gap: 10px; }
-      .mock-exam .path-grid { grid-template-columns: 1fr; }
-      .mock-exam .path-arrow { transform: rotate(90deg); padding: 8px 0; }
-      .mock-exam .apply-section { padding: 20px; }
-      .mock-exam .apply-form .form-row { grid-template-columns: 1fr; }
     }
     
     @media (max-width: 500px) {
@@ -298,9 +220,152 @@
       .grade-tags { flex-direction: column; }
       .tab-hint { font-size: 11px; padding: 6px 12px; }
     }
+    
+    /* 여름 특강 탭 버튼 */
+    .tab-btn.summer { background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); color: white; animation: pulse-summer 2s infinite; }
+    .tab-btn.summer:hover { background: linear-gradient(135deg, #E55A2B 0%, #E8841A 100%); }
+    @keyframes pulse-summer { 0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.4); } 50% { box-shadow: 0 0 0 8px rgba(255, 107, 53, 0); } }
+    
+    /* 여름 특강 콘텐츠 */
+    .summer-header { text-align: center; margin-bottom: 30px; }
+    .summer-badge { display: inline-block; background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); color: white; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 700; margin-bottom: 15px; }
+    .summer-header h1 { font-size: 32px; font-weight: 900; color: #1a1a2e; margin-bottom: 10px; }
+    .summer-target { font-size: 18px; color: #4A7C7E; font-weight: 600; }
+    
+    .summer-intro { background: #f8f9fa; padding: 25px; border-radius: 12px; margin-bottom: 30px; text-align: center; }
+    .summer-intro p { font-size: 16px; color: #555; margin-bottom: 8px; font-style: italic; }
+    .summer-intro .summer-warning { font-style: normal; font-weight: 700; color: #E53935; margin-top: 15px; font-size: 17px; }
+    
+    .summer-section { margin-bottom: 30px; }
+    .summer-section h2 { font-size: 20px; font-weight: 700; color: #1a1a2e; margin-bottom: 20px; border-left: 4px solid #FF6B35; padding-left: 12px; }
+    
+    .summer-features { display: flex; flex-direction: column; gap: 15px; }
+    .summer-feature { background: white; border: 1px solid #eee; border-radius: 12px; padding: 20px; }
+    .feature-compare { font-size: 16px; font-weight: 600; margin-bottom: 10px; }
+    .feature-compare .no { color: #999; }
+    .feature-compare .yes { color: #4A7C7E; }
+    .summer-feature p { font-size: 14px; color: #666; line-height: 1.6; }
+    
+    .summer-schedule { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 15px; }
+    .schedule-row { background: #f0f7f7; padding: 12px; border-radius: 8px; text-align: center; }
+    .schedule-row .week { display: block; font-size: 12px; color: #4A7C7E; font-weight: 600; }
+    .schedule-row .date { display: block; font-size: 14px; color: #1a1a2e; font-weight: 700; margin-top: 4px; }
+    .schedule-time { text-align: center; font-size: 16px; color: #4A7C7E; font-weight: 600; }
+    
+    .curriculum-list { display: flex; flex-direction: column; gap: 15px; }
+    .curriculum-item { background: #fafafa; padding: 20px; border-radius: 12px; border-left: 3px solid #4A7C7E; }
+    .curriculum-item strong { font-size: 16px; color: #1a1a2e; }
+    .curriculum-item p { font-size: 14px; color: #666; margin-top: 8px; }
+    .curriculum-item ul { margin-top: 10px; padding-left: 20px; }
+    .curriculum-item li { font-size: 14px; color: #666; margin-bottom: 5px; }
+    
+    .summer-price { display: flex; justify-content: center; align-items: center; gap: 15px; background: linear-gradient(135deg, #4A7C7E 0%, #5A8C8E 100%); color: white; padding: 20px; border-radius: 12px; margin-bottom: 20px; }
+    .price-label { font-size: 18px; }
+    .price-amount { font-size: 28px; font-weight: 900; }
+    .price-period { font-size: 16px; font-weight: 500; opacity: 0.9; margin-left: 5px; }
+    .simple-price { text-align: center; font-size: 15px; color: #555; margin: 20px 0; }
+    
+    .summer-cta { text-align: center; font-size: 20px; font-weight: 700; color: #FF6B35; padding: 15px; }
+    
+    /* 반 선택 토글 */
+    .class-toggle { display: flex; gap: 10px; margin-bottom: 25px; }
+    .class-btn { flex: 1; padding: 15px; border: 2px solid #ddd; background: white; border-radius: 12px; font-size: 15px; font-weight: 700; cursor: pointer; transition: all 0.3s; }
+    .class-btn.active { border-color: #4A7C7E; background: #f0f7f7; color: #4A7C7E; }
+    .class-btn:hover { border-color: #4A7C7E; }
+    
+    /* 반별 콘텐츠 */
+    .class-content { display: none; }
+    .class-content.active { display: block; }
+    .class-title-bar { background: linear-gradient(135deg, #4A7C7E 0%, #5A8C8E 100%); color: white; padding: 20px; border-radius: 12px; margin-bottom: 20px; }
+    .class-title-bar.classB { background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); }
+    .class-title-bar h2 { font-size: 22px; margin-bottom: 5px; }
+    .class-time { font-size: 14px; opacity: 0.9; }
+    
+    /* 기초반 스타일 */
+    .summer-goal { font-style: normal; font-weight: 600; color: #4A7C7E; }
+    .curriculum-subtitle { color: #FF6B35; font-weight: 600; font-size: 14px; margin: 5px 0; }
+    .clinic-intro { text-align: center; font-weight: 600; color: #555; margin-bottom: 15px; }
+    .clinic-box { background: #fff5f0; border: 1px solid #ffccbc; border-radius: 12px; padding: 20px; }
+    .clinic-item { margin-bottom: 15px; }
+    .clinic-item:last-of-type { margin-bottom: 10px; }
+    .clinic-item strong { color: #E65100; }
+    .clinic-item p { font-size: 14px; color: #666; margin-top: 5px; }
+    .clinic-warning { text-align: center; color: #E53935; font-weight: 600; font-size: 13px; margin-top: 10px; }
+    
+    .target-box { background: #e8f5e9; border-left: 4px solid #4CAF50; padding: 15px 20px; border-radius: 8px; margin-top: 20px; }
+    .target-box.classB { background: #fff3e0; border-left-color: #FF9800; }
+    .target-box strong { color: #2E7D32; display: block; margin-bottom: 5px; }
+    .target-box.classB strong { color: #E65100; }
+    .target-box p { font-size: 14px; color: #555; margin: 0; }
+    
+    .schedule-summary { text-align: center; margin-top: 15px; }
+    .schedule-summary p { font-size: 14px; color: #555; margin: 5px 0; }
+    
+    .summer-section h3 { font-size: 18px; font-weight: 700; color: #1a1a2e; margin-bottom: 15px; border-left: 4px solid #4A7C7E; padding-left: 12px; }
+    
+    /* 팝업 스타일 */
+    .popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; justify-content: center; align-items: center; z-index: 9999; }
+    .popup-content { background: white; border-radius: 16px; max-width: 400px; width: 90%; overflow: hidden; animation: popupIn 0.3s ease; }
+    @keyframes popupIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .popup-header { background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); color: white; padding: 25px; text-align: center; }
+    .popup-header h2 { font-size: 24px; font-weight: 900; margin-bottom: 5px; }
+    .popup-header p { font-size: 14px; opacity: 0.9; }
+    .popup-body { padding: 25px; }
+    .popup-body ul { list-style: none; padding: 0; }
+    .popup-body li { padding: 10px 0; border-bottom: 1px solid #eee; font-size: 15px; color: #333; }
+    .popup-body li:last-child { border-bottom: none; }
+    .popup-body li strong { color: #4A7C7E; }
+    .popup-buttons { display: flex; gap: 10px; margin-top: 20px; }
+    .popup-btn { flex: 1; padding: 14px; border: none; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; }
+    .popup-btn.primary { background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); color: white; }
+    .popup-btn.secondary { background: #f0f0f0; color: #666; }
+    .popup-class { background: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 10px; }
+    .popup-class-title { font-size: 16px; font-weight: 700; color: #4A7C7E; margin-bottom: 5px; }
+    .popup-class p { font-size: 14px; color: #555; margin: 0; }
+    .popup-info { text-align: center; font-size: 14px; color: #666; padding: 10px 0; border-top: 1px dashed #ddd; margin-top: 10px; }
+    
+    /* 팝업 모바일 */
+    @media (max-width: 500px) {
+      .summer-header h1 { font-size: 24px; }
+      .summer-schedule { grid-template-columns: repeat(2, 1fr); }
+      .summer-price { flex-direction: column; gap: 5px; }
+      .price-amount { font-size: 24px; }
+      .popup-content { width: 95%; }
+      .class-toggle { flex-direction: column; }
+      .class-btn { font-size: 14px; padding: 12px; }
+      .class-title-bar h2 { font-size: 18px; }
+      .class-time { font-size: 12px; }
+    }
   </style>
 </head>
 <body>
+  <!-- 여름 특강 팝업 -->
+  <div class="popup-overlay" id="summerPopup">
+    <div class="popup-content">
+      <div class="popup-header">
+        <h2>🔥 여름 모의고사 특강</h2>
+        <p>고1·고2 수능 대비반 모집</p>
+      </div>
+      <div class="popup-body">
+        <div class="popup-class">
+          <div class="popup-class-title">🅰 심화반 (1등급 목표)</div>
+          <p>⏰ 매주 일요일 <strong>오전 9시~1시</strong></p>
+        </div>
+        <div class="popup-class">
+          <div class="popup-class-title">🅱 기초반 (3등급 이하)</div>
+          <p>⏰ 매주 일요일 <strong>오후 2시~5시</strong> + 클리닉</p>
+        </div>
+        <div class="popup-info">
+          📅 7/19 ~ 9/6 (8주 완성)
+        </div>
+        <div class="popup-buttons">
+          <button class="popup-btn secondary" onclick="closePopup()">닫기</button>
+          <button class="popup-btn primary" onclick="goToSummer()">자세히 보기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="header">
     <h1>안녕하세요? 언어의창입니다.</h1>
     <p>중1부터 고3까지, 학교별 맞춤 국어 전문 학원</p>
@@ -313,7 +378,7 @@
     <button class="tab-btn" onclick="showTab(3)">고등부 수업 소개</button>
     <button class="tab-btn" onclick="showTab(4)">고등부 학교 분석</button>
     <button class="tab-btn" onclick="showTab(5)">전체 시간표</button>
-    <button class="tab-btn" onclick="showTab(6)" style="background:#FF6B35;color:#fff;animation:pulse 2s infinite;">🔥 모의고사반 모집</button>
+    <button class="tab-btn summer" onclick="showTab(6)">🔥 모의고사 특강</button>
     <div class="tab-hint" id="tabHint">👆 탭을 눌러 내용을 확인하세요!</div>
   </div>
   
@@ -621,143 +686,209 @@
         </div>
       </div>
       
-      <!-- 모의고사반 모집 -->
+      <!-- 모의고사 특강 -->
       <div class="tab-content" id="tab6">
-        <div class="mock-exam">
-          <div class="header-row">
-            <img src="https://langwindow.github.io/langwin/logo.png" alt="언어의창" class="logo">
-            <div class="badge">🔥 중3 모의고사반 신규 모집</div>
+        <div class="card">
+          <div class="summer-header">
+            <span class="summer-badge">2026 여름</span>
+            <h1>모의고사 특강</h1>
+            <p class="summer-target">고1 · 고2 대상 | 8주 완성</p>
           </div>
-          <h1>중3, 지금 <span>고등부 모의고사</span>를 경험하세요</h1>
-          <p class="subtitle">중학교 국어와 고등학교 국어는 완전히 다른 시험입니다</p>
-          <div class="intro-text">
-            <p>중학교 국어는 교과서 내용을 외워서 푸는 시험이지만, 고등 모의고사는 <strong>처음 보는 지문을 제한된 시간 안에 정확히 읽어내고 판단하는 능력</strong>을 요구합니다.</p>
-            <p style="margin-top:12px;">이 차이를 중3때 미리 경험하고 대비하는 학생과, 고등학교에 가서 처음 마주하는 학생의 차이는 생각보다 큽니다. 언어의창에서 중3 학생들을 대상으로 <strong>고등부 모의고사 풀이반</strong>을 개강합니다.</p>
+          
+          <!-- 반 선택 토글 -->
+          <div class="class-toggle">
+            <button class="class-btn active" onclick="showClass('A')">🅰 심화반 (1등급 목표)</button>
+            <button class="class-btn" onclick="showClass('B')">🅱 기초반 (3등급 이하)</button>
           </div>
-          <div class="info-grid">
-            <div class="info-card"><div class="icon">📖</div><h3>고등부 모의고사 지문 독해</h3><p>처음 보는 지문을 어떻게 읽어야 하는지, 핵심 정보를 빠르게 파악하는 훈련을 합니다.</p></div>
-            <div class="info-card"><div class="icon">🎯</div><h3>문제 유형별 접근 전략</h3><p>문학, 비문학, 문법 등 유형별 접근법과 선지 판단 사고방식을 익힙니다.</p></div>
-            <div class="info-card"><div class="icon">🔍</div><h3>오답 분석 및 클리닉</h3><p>틀린 문제를 왜 틀렸는지, 맞은 문제도 근거가 정확한지 점검합니다.</p></div>
-            <div class="info-card"><div class="icon">🧠</div><h3>고등 국어 사고방식 장착</h3><p>분석적 읽기와 논리적 판단력을 중3 시기에 미리 갖추도록 지도합니다.</p></div>
-          </div>
-          <div class="schedule-banner">
-            <h3>📅 모집 일정 및 수업 안내</h3>
-            <div class="schedule-row">
-              <div class="schedule-tag">📝 입학고사: 4/26(일) ~ 5/3(일)</div>
-              <div class="schedule-tag">🎓 개강: 5/9(토)</div>
-              <div class="schedule-tag">⏰ 매주 토 4~7시</div>
+
+          <!-- A반: 심화반 -->
+          <div class="class-content active" id="classA">
+            <div class="class-title-bar">
+              <h2>🅰 모의고사 심화반</h2>
+              <span class="class-time">매주 일요일 오전 9:00 ~ 13:00 (4시간)</span>
             </div>
-            <p style="margin-top:16px;font-size:14px;opacity:0.9;">클리닉 1시간 (시간 조정 가능) + 모의고사 풀이 2시간</p>
-          </div>
-          <div class="path-section">
-            <h2>📌 입학고사 결과에 따른 안내</h2>
-            <div class="path-grid">
-              <div class="path-card pass"><h3>✅ 입학고사 통과</h3><p>모의고사 풀이반에 바로 수강 가능합니다.</p><div class="result-badge">모의고사반 바로 수강</div></div>
-              <div class="path-arrow">또는</div>
-              <div class="path-card grow"><h3>📘 컷 미달 시</h3><p>정규과정으로 기초를 다진 후 향후 합류합니다.</p><div class="result-badge">정규과정 → 향후 합류</div></div>
+            
+            <div class="summer-intro">
+              <p>"문제는 풀었는데 왜 맞았는지 모르겠어요"</p>
+              <p>"감으로 찍었는데 운 좋게 맞았어요"</p>
+              <p class="summer-warning">👉 이런 학생은 절대 1등급에 도달할 수 없습니다.</p>
             </div>
-            <p style="text-align:center;margin-top:16px;font-size:14px;color:#666;">어떤 경로든 언어의창 수업은 고등 국어를 향한 가장 확실한 준비가 됩니다.</p>
-          </div>
-          <div class="apply-section">
-            <h2>📞 입학고사 신청 / 상담 신청</h2>
-            <div class="apply-form" id="applyForm">
-              <div class="form-row">
-                <div class="form-group"><label>학생 이름 *</label><input type="text" id="studentName" placeholder="학생 이름"></div>
-                <div class="form-group"><label>학교 / 학년</label><input type="text" id="studentSchool" placeholder="예: OO중학교 3학년"></div>
+
+            <div class="summer-section">
+              <h3>🎯 이 수업이 다른 이유</h3>
+              <div class="summer-features">
+                <div class="summer-feature">
+                  <div class="feature-compare"><span class="no">해설 수업 ❌</span> → <span class="yes">방법 체화 수업 ⭕</span></div>
+                  <p>모르는 지문이 나와도 스스로 해결하는 '방법론적 사고'를 훈련합니다.</p>
+                </div>
+                <div class="summer-feature">
+                  <div class="feature-compare"><span class="no">겉핥기 배경지식 ❌</span> → <span class="yes">진짜 배경지식 ⭕</span></div>
+                  <p>구절구절이 머릿속에 선명하게 와닿는 깊이 있는 독해력을 키웁니다.</p>
+                </div>
+                <div class="summer-feature">
+                  <div class="feature-compare"><span class="no">객관식 찍기 ❌</span> → <span class="yes">주관식 문답 ⭕</span></div>
+                  <p>매주 Half Test를 통해 정답의 근거를 직접 서술하며, 감으로 푸는 습관을 완벽히 교정합니다.</p>
+                </div>
               </div>
-              <div class="form-group"><label>학부모 연락처 *</label><input type="tel" id="parentPhone" placeholder="010-0000-0000"></div>
-              <div class="form-group"><label>신청 유형 *</label><select id="applyType"><option value="">선택해주세요</option><option value="입학고사 신청">입학고사 신청</option><option value="상담 신청">상담 신청</option><option value="입학고사 + 상담">입학고사 + 상담 모두</option></select></div>
-              <div class="form-group"><label>문의 사항 (선택)</label><textarea id="message" placeholder="궁금한 점이 있으시면 작성해주세요"></textarea></div>
-              <button class="apply-btn" id="submitBtn" onclick="submitApply()">신청하기</button>
             </div>
-            <div class="apply-success" id="applySuccess"><div class="check">✅</div><p><strong>신청이 접수되었습니다!</strong><br>빠른 시일 내에 연락드리겠습니다.<br>📞 <a href="tel:051-702-7412" style="color:#FF6B35;font-weight:700;">051-702-7412</a></p></div>
-            <p style="text-align:center;margin-top:16px;font-size:13px;color:#999;">전화 신청도 가능합니다 📞 <a href="tel:051-702-7412" style="color:#FF6B35;font-weight:600;">051-702-7412</a></p>
+
+            <div class="summer-section">
+              <h3>📖 주차별 수업 구성 (4시간)</h3>
+              <div class="curriculum-list">
+                <div class="curriculum-item">
+                  <strong>실전 모의고사 훈련 (90분)</strong>
+                  <p>실전과 동일한 긴장감 속에서 다양한 작품과 글을 섭렵</p>
+                </div>
+                <div class="curriculum-item">
+                  <strong>방법론 체화 및 참여형 심화 해설</strong>
+                  <ul>
+                    <li>비문학 배경지식 & 독해 방법론</li>
+                    <li>독서와 작문 심화 지문 대응법</li>
+                    <li>문학 독해 방법론 (고전/현대)</li>
+                    <li>화법과 언어의 본질적 접근법</li>
+                  </ul>
+                </div>
+                <div class="curriculum-item">
+                  <strong>Weekly Half Test (주관식 과제)</strong>
+                  <p>주관식 문답을 통한 철저한 1:1 사고력 점검</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="target-box">
+              <strong>📚 수업 대상</strong>
+              <p>수능 국어 1등급을 목표로 근본적인 독해력을 키우고자 하는 고1, 고2</p>
+            </div>
           </div>
-          <div class="footer-bar">📍 해운대구 세실로27번길 21 원재프라자 8층 &nbsp;|&nbsp; 📞 <a href="tel:051-702-7412">051-702-7412</a> &nbsp;|&nbsp; <a href="https://blog.naver.com/langwin" target="_blank">blog.naver.com/langwin</a></div>
+
+          <!-- B반: 기초반 -->
+          <div class="class-content" id="classB">
+            <div class="class-title-bar classB">
+              <h2>🅱 모의고사 기초반</h2>
+              <span class="class-time">매주 일요일 오후 2:00 ~ 5:00 (3시간) + 클리닉 1시간</span>
+            </div>
+            
+            <div class="summer-intro">
+              <p>이번 수업을 통해 최소한 이것만은 확실하게!</p>
+              <p class="summer-goal">👉 "본문을 뚫어내는 텍스트 읽기 역량의 향상"</p>
+              <p class="summer-goal">👉 "매번 헷갈리던 객관식 선지의 함정을 피하는 정확한 근거 찾기"</p>
+            </div>
+
+            <div class="summer-section">
+              <h3>📖 핵심 훈련 커리큘럼 (3시간)</h3>
+              <div class="curriculum-list">
+                <div class="curriculum-item">
+                  <strong>1. 독해 습관 정밀 교정</strong>
+                  <p class="curriculum-subtitle">"눈으로만 훑는 가짜 독서는 끝"</p>
+                  <p>무의미하게 밑줄만 긋는 습관을 버립니다. 문장과 문장을 연결하고, 의미 단위로 끊어 읽으며 글쓴이의 의도에 즉각적으로 반응하는 능동적인 텍스트 접근법을 훈련합니다.</p>
+                </div>
+                <div class="curriculum-item">
+                  <strong>2. 객관식 선지 분석의 정교화</strong>
+                  <p class="curriculum-subtitle">"정답 1개보다 중요한 오답 4개의 이유"</p>
+                  <p>맞힌 문제라도 대충 넘어가지 않습니다. 정답을 찾는 것을 넘어, 나머지 4개의 선지가 왜 오답인지 본문 속에서 정확한 근거를 찾아 매칭하는 훈련을 합니다.</p>
+                </div>
+                <div class="curriculum-item">
+                  <strong>3. 필수 개념어 및 뼈대 잡기</strong>
+                  <p class="curriculum-subtitle">"갈래별 독해 매뉴얼 체화"</p>
+                  <p>내신과 수능을 관통하는 필수 국어 개념어를 완벽히 숙지시킵니다. 현대시, 고전소설, 비문학 등 각 영역별로 글을 어떻게 접근해야 하는지 기본적인 독해 매뉴얼을 장착해 줍니다.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="summer-section">
+              <h3>🔎 필수 클리닉 (+1시간)</h3>
+              <p class="clinic-intro">"배운 것은 반드시 내 것으로 만든다"</p>
+              <div class="clinic-box">
+                <div class="clinic-item">
+                  <strong>오답 노트 의무화 및 1:1 점검</strong>
+                  <p>수업 시간에 배운 독해 방법론을 과제에 제대로 적용했는지 확인합니다. 단순히 문제만 풀어오는 숙제는 인정하지 않습니다.</p>
+                </div>
+                <div class="clinic-item">
+                  <strong>클리닉 필수 참석</strong>
+                  <p>정규 수업 외에 담당 선생님과 시간을 조율하여 클리닉에 참석합니다. 강사가 직접 학생의 과제물(근거 찾기, 오답 분석)을 확인하고 1:1 질의응답을 통해 잘못된 사고 과정을 즉각 교정합니다.</p>
+                </div>
+                <p class="clinic-warning">※ 숙제 미이행 및 성취도 미달 시 귀가 불가</p>
+              </div>
+            </div>
+
+            <div class="target-box classB">
+              <strong>📚 수업 대상</strong>
+              <p>국어 공부의 갈피를 못 잡는 고1, 고2 / 확실한 독해 방법론이 필요한 3등급 이하 학생</p>
+            </div>
+          </div>
+
+          <!-- 공통: 일정 및 수강료 -->
+          <div class="summer-section">
+            <h3>📅 수업 일정 (8주 완성)</h3>
+            <div class="summer-schedule">
+              <div class="schedule-row"><span class="week">1회차</span><span class="date">7/19(일)</span></div>
+              <div class="schedule-row"><span class="week">2회차</span><span class="date">7/26(일)</span></div>
+              <div class="schedule-row"><span class="week">3회차</span><span class="date">8/2(일)</span></div>
+              <div class="schedule-row"><span class="week">4회차</span><span class="date">8/9(일)</span></div>
+              <div class="schedule-row"><span class="week">5회차</span><span class="date">8/16(일)</span></div>
+              <div class="schedule-row"><span class="week">6회차</span><span class="date">8/23(일)</span></div>
+              <div class="schedule-row"><span class="week">7회차</span><span class="date">8/30(일)</span></div>
+              <div class="schedule-row"><span class="week">8회차</span><span class="date">9/6(일)</span></div>
+            </div>
+            <div class="schedule-summary">
+              <p>🅰 심화반: 오전 9:00 ~ 13:00 (4시간)</p>
+              <p>🅱 기초반: 오후 2:00 ~ 5:00 (3시간) + 클리닉 1시간</p>
+            </div>
+          </div>
+
+          <p class="simple-price">💰 수강료: 40만원 (4주간)</p>
+
+          <div class="summer-cta">
+            수능 국어, 이번 여름에 시작하세요! 🔥
+          </div>
+
+          <div class="footer-bar" style="margin-top: 20px;">
+            📍 해운대구 세실로27번길 21 원재프라자 8층 &nbsp;|&nbsp; 
+            📞 <a href="tel:051-702-7412">051-702-7412</a> &nbsp;|&nbsp; 
+            <a href="https://blog.naver.com/langwin" target="_blank">blog.naver.com/langwin</a>
+          </div>
         </div>
       </div>
       
     </div>
   </div>
-
-  <!-- 팝업 -->
-  <div class="popup-overlay" id="mockExamPopup">
-    <div class="popup-box">
-      <div class="popup-header">
-        <h2>🔥 중3 모의고사반 신규 모집</h2>
-        <p>고등부 모의고사, 중3때 미리 경험하세요!</p>
-      </div>
-      <div class="popup-body">
-        <div class="info-item"><span class="icon">📝</span><span>입학고사: 4/26(일) ~ 5/3(일)</span></div>
-        <div class="info-item"><span class="icon">🎓</span><span>개강: 5/9(토)</span></div>
-        <div class="info-item"><span class="icon">⏰</span><span>매주 토요일 오후 4시 ~ 7시</span></div>
-        <div class="info-item"><span class="icon">✅</span><span>입학고사 통과 시 바로 수강 가능</span></div>
-        <div class="info-item"><span class="icon">📞</span><span>신청: 051-702-7412</span></div>
-      </div>
-      <div class="popup-actions">
-        <button class="btn-secondary" onclick="closePopup()">닫기</button>
-        <button class="btn-primary" onclick="closePopup();showTab(6);">자세히 보기</button>
-      </div>
-    </div>
-  </div>
   
   <script>
     function showTab(index) {
-      document.querySelectorAll('.tab-btn').forEach(function(btn, i) { btn.classList.toggle('active', i === index); });
-      document.querySelectorAll('.tab-content').forEach(function(content, i) { content.classList.toggle('active', i === index); });
-      var hint = document.getElementById('tabHint');
+      document.querySelectorAll('.tab-btn').forEach((btn, i) => { btn.classList.toggle('active', i === index); });
+      document.querySelectorAll('.tab-content').forEach((content, i) => { content.classList.toggle('active', i === index); });
+      const hint = document.getElementById('tabHint');
       if (hint) hint.style.display = 'none';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-
+    
+    // 팝업 함수
     function closePopup() {
-      document.getElementById('mockExamPopup').style.display = 'none';
-      sessionStorage.setItem('popupClosed', 'true');
+      document.getElementById('summerPopup').style.display = 'none';
     }
-
-    if (!sessionStorage.getItem('popupClosed')) {
-      document.getElementById('mockExamPopup').style.display = 'flex';
-    } else {
-      document.getElementById('mockExamPopup').style.display = 'none';
+    
+    function goToSummer() {
+      closePopup();
+      showTab(6);
     }
-
-    var GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbwVgQAojT7ElTiOV06sY3f4yfJcd0DW7GPaGRQZGmLDwEI1BuWFPtTvpQFzvzMBU1GX/exec';
-
-    function submitApply() {
-      var name = document.getElementById('studentName').value.trim();
-      var school = document.getElementById('studentSchool').value.trim();
-      var phone = document.getElementById('parentPhone').value.trim();
-      var type = document.getElementById('applyType').value;
-      var msg = document.getElementById('message').value.trim();
-      if (!name || !phone || !type) { alert('학생 이름, 연락처, 신청 유형은 필수입니다.'); return; }
-      var btn = document.getElementById('submitBtn');
-      btn.disabled = true;
-      btn.textContent = '전송 중...';
-
-      var formData = new FormData();
-      formData.append('studentName', name);
-      formData.append('studentSchool', school);
-      formData.append('parentPhone', phone);
-      formData.append('applyType', type);
-      formData.append('message', msg);
-      formData.append('timestamp', new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' }));
-
-     fetch(GOOGLE_SHEET_URL, { 
-  method: 'POST', 
-  mode: 'no-cors',  // ← CORS 문제 회피
-  body: formData 
-})
-.then(function() {
-  document.getElementById('applyForm').style.display = 'none';
-  document.getElementById('applySuccess').style.display = 'block';
-})
-.catch(function(err) {
-  console.error('전송 실패:', err);
-  alert('전송에 실패했습니다. 직접 전화 주세요: 051-702-7412');
-  btn.disabled = false;
-  btn.textContent = '신청하기';
-});
+    
+    // 반 선택 함수
+    function showClass(type) {
+      document.querySelectorAll('.class-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.class-content').forEach(content => content.classList.remove('active'));
+      
+      if (type === 'A') {
+        document.querySelector('.class-btn:first-child').classList.add('active');
+        document.getElementById('classA').classList.add('active');
+      } else {
+        document.querySelector('.class-btn:last-child').classList.add('active');
+        document.getElementById('classB').classList.add('active');
+      }
     }
+    
+    // 팝업 외부 클릭 시 닫기
+    document.getElementById('summerPopup').addEventListener('click', function(e) {
+      if (e.target === this) closePopup();
+    });
   </script>
 </body>
 </html>
