@@ -772,7 +772,7 @@
 </div>
 
 <script>
-    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwLGt3rwdisiyU-jNOkLbK6ouibjGe07_dLVyPB2KuaflH1YxOjnoymWwx3sljkLtxR/exec";
+    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzMQT5TeL0YOJwWf5i_BHlSQRSrbHyl5gX848vU1QASVKsD3XbGr5u9OxN-SRAmOKBZ/exec";
 
     document.getElementById('applicationForm').addEventListener('submit', function(e) {
         e.preventDefault();
@@ -802,7 +802,7 @@
         submitBtn.disabled = true;
         submitBtn.innerText = "전송 중...";
 
-        if (APPS_SCRIPT_URL === "https://script.google.com/macros/s/AKfycbwLGt3rwdisiyU-jNOkLbK6ouibjGe07_dLVyPB2KuaflH1YxOjnoymWwx3sljkLtxR/exec") {
+        if (APPS_SCRIPT_URL === "https://script.google.com/macros/s/AKfycbzMQT5TeL0YOJwWf5i_BHlSQRSrbHyl5gX848vU1QASVKsD3XbGr5u9OxN-SRAmOKBZ/exec") {
             alert("구글 시트 연동 URL이 설정되지 않았습니다.");
             submitBtn.disabled = false;
             submitBtn.innerText = "설명회 참가 신청하기";
